@@ -11,6 +11,17 @@
     <title>Add new user</title>
 </head>
 <body>
+<div>
+    <h1>Super app!</h1>
+</div>
+<div>
+    <%
+        if(request.getAttribute("userLogin")!= null){
+            out.println("<p>User '" + request.getAttribute("userLogin")+ "' added!</p>");
+        }
+    %>
+</div>
+
 <form method="post">
     <label>Login:
 <input type="text" name ="login"><br />
@@ -23,6 +34,8 @@
     <button type="submit">Submit</button>
 </form>
 
-
+<div>
+    <button onclick="location.href='/'">Back to main</button>
+</div>
 </body>
 </html>
