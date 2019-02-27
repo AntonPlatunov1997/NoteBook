@@ -16,9 +16,18 @@
 </div>
 <div>
     <%
-        if(request.getAttribute("userLogin")!= null){
-            out.println("<p>User '" + request.getAttribute("userLogin")+ "' added!</p>");
+        if(request.getAttribute("exceptionLogin")!=null){
+            out.println(request.getAttribute("exceptionLogin"));
         }
+        if(request.getAttribute("exceptionValid")!=null){
+            out.println(request.getAttribute("exceptionValid"));
+        }
+
+        if((request.getAttribute("userLogin")!= null)&&(request.getAttribute("userPassword")!=null)){
+            out.println("<p>User '" + request.getAttribute("userLogin")+ "' added!</p>");
+
+        }
+
     %>
 </div>
 

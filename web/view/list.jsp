@@ -1,4 +1,5 @@
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="app.entities.User" %><%--
   Created by IntelliJ IDEA.
   User: Антон
   Date: 25.02.2019
@@ -22,9 +23,9 @@
             <h2>Users</h2>
         </div>
         <%
-            List<String> logins = (List<String>) request.getAttribute("userLogins");
+            List<User> logins = (List<User>) request.getAttribute("userLogins");
             if(logins != null && !logins.isEmpty()) {
-                for (String s:logins){
+                for (User s:logins){
                     out.println("<li>" + s + "</li>");
                 }
             }
